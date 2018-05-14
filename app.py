@@ -5,7 +5,7 @@ def calculate_time():
     print('Enter the total amount of entries:')
 
     try:
-        entry_amount = int(input)
+        entry_amount = int(input())
     except:
         print('Please enter an integer - a whole number.')
         entry_amount = input()
@@ -56,10 +56,27 @@ def calculate_time():
     #It takes the beginning hour, which was converted to minutes, and it adds it to the beginning minutes. 
     #This value will be used later to be subtracted from the 'total_ending_time'
 
-    total_beginning_time = beginning_hour + beginning_minutes
-    total_beginning_time /= 60  #This converts the time back into hours, but now it considers the minutes as well, 
+        total_beginning_time = beginning_hour + beginning_minutes
+        total_beginning_time /= 60  #This converts the time back into hours, but now it considers the minutes as well, 
                                 #thus giving us a decimal, or float, value.
 
+
+    #This next block of code will then ask the user for the ending times.
+
+        print('Ending time-')
+        print('Enter hour:')
+
+        try:
+            ending_hour = int(input())
+            ending_hour *= 60   #Once again, this is to convert hours to minutes.
+        except:
+            print('Please enter an integer - a whole number.')
+            ending_hour = input()
+            while ending_hour.isdigit() == False:
+                print('Please enter an integer - a whole number.')
+                ending_hour = input()
+        
+        ending_hour = int(ending_hour)
 
 
 calculate_time()
