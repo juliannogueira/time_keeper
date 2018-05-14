@@ -57,9 +57,10 @@ def calculate_time():
     #It takes the beginning hour, which was converted to minutes, and it adds it to the beginning minutes. 
     #This value will be used later to be subtracted from the 'total_ending_time'
 
-        total_beginning_time = beginning_hour + beginning_minutes
-        total_beginning_time /= 60  #This converts the time back into hours, but now it considers the minutes as well, 
+        beginning_time = beginning_hour + beginning_minutes
+        beginning_time /= 60  #This converts the time back into hours, but now it considers the minutes as well, 
                                 #thus giving us a decimal, or float, value.
+
 
 
     #This next block of code will then ask the user for the ending times.
@@ -80,6 +81,7 @@ def calculate_time():
             ending_hour *= 60
         
 
+
     #The next block of code is for the minute entries.
 
         print('Enter minutes:')
@@ -96,5 +98,15 @@ def calculate_time():
 
 
 
+    #This block will add up the ending time, and it will be used to subtract the beginning time.
+
+        ending_time = ending_hour + ending_minutes
+        ending_time /= 60   #Once again, this is performed to convert minutes to hours.
+
+
+
+    
+
+        
 
 calculate_time()
