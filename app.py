@@ -16,7 +16,7 @@ def calculate_time():
     entry_amount = int(entry_amount)    #This is to perform operations later on.
 
 
-    #The next block of code allows the user to enter time entries.
+    #The next block of code allows the user to enter time entries. The beginning hour is entered first.
     
     for counter in range(0, entry_amount):
         print('Entry ' + str(counter + 1))  #The + 1 is to begin with 'Entry 1' instead of 'Entry 0'
@@ -35,6 +35,23 @@ def calculate_time():
         
         beginning_hour = int(beginning_hour)
         beginning_hour *= 60
+
+    #The next block of code is used for the beginning minute entries.
+
+        print('Enter minutes:')
+
+        try:
+            beginning_minutes = int(input())
+        except:
+            print('Please enter an integer - a whole number.')
+            beginning_minutes = input()
+            while beginning_minutes.isdigit() == False:
+                print('Please enter an integer - a whole number.')
+                beginning_minutes = input()
+        
+        beginning_minutes = int(beginning_minutes)
+
+
 
 
 
