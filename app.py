@@ -15,6 +15,8 @@ def calculate_time():
         entry_amount = int(entry_amount)    #This is to perform operations later on.
 
 
+    total_time = 0  #This will be used to store entry time values.
+
 
     #The next block of code allows the user to enter time entries. The beginning hour is entered first.
     
@@ -110,6 +112,14 @@ def calculate_time():
         per_entry_time = ending_time - beginning_time
         print('\nThe amount of hours worked for entry ' + str(counter +1) + ' is: ' + str(per_entry_time) + '.')
 
+    
+
+
+    #This block of code will be used to calculate the total amount of time worked for all entries. 
+
+        total_time += per_entry_time
+
+    print('\nThe total amount of hours you have worked is: ' + str(total_time) + '.')
         
 
 calculate_time()
