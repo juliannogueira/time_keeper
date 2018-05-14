@@ -12,14 +12,14 @@ def calculate_time():
         while entry_amount.isdigit() == False:
             print('Please enter an integer - a whole number.')
             entry_amount = input()
+        entry_amount = int(entry_amount)    #This is to perform operations later on.
 
-    entry_amount = int(entry_amount)    #This is to perform operations later on.
 
 
     #The next block of code allows the user to enter time entries. The beginning hour is entered first.
     
     for counter in range(0, entry_amount):
-        print('Entry ' + str(counter + 1))  #The + 1 is to begin with 'Entry 1' instead of 'Entry 0'
+        print('\nEntry ' + str(counter + 1))  #The + 1 is to begin with 'Entry 1' instead of 'Entry 0'
         print('Beginning time-')
         print('Enter hour:')
 
@@ -32,9 +32,10 @@ def calculate_time():
             while beginning_hour.isdigit() == False:
                 print('Please enter an integer - a whole number.')
                 beginning_hour = input()
-        
-        beginning_hour = int(beginning_hour)
-        beginning_hour *= 60
+            beginning_hour = int(beginning_hour)
+            beginning_hour *= 60
+
+
 
     #The next block of code is used for the beginning minute entries.
 
@@ -48,8 +49,8 @@ def calculate_time():
             while beginning_minutes.isdigit() == False:
                 print('Please enter an integer - a whole number.')
                 beginning_minutes = input()
-        
-        beginning_minutes = int(beginning_minutes)
+            beginning_minutes = int(beginning_minutes)
+
 
 
     #This block of code is used to create a float value for the 'hour' and 'minutes' that were previously entered.
@@ -63,7 +64,7 @@ def calculate_time():
 
     #This next block of code will then ask the user for the ending times.
 
-        print('Ending time-')
+        print('\nEnding time-')
         print('Enter hour:')
 
         try:
@@ -75,8 +76,25 @@ def calculate_time():
             while ending_hour.isdigit() == False:
                 print('Please enter an integer - a whole number.')
                 ending_hour = input()
+            ending_hour = int(ending_hour)
+            ending_hour *= 60
         
-        ending_hour = int(ending_hour)
+
+    #The next block of code is for the minute entries.
+
+        print('Enter minutes:')
+
+        try:
+            ending_minutes = int(input())
+        except:
+            print('Please enter an integer - a whole number.')
+            ending_minutes = input()
+            while ending_minutes.isdigit() == False:
+                print('Please enter an integer - a whole number.')
+                ending_minutes = input()
+            ending_minutes = int(ending_minutes)
+
+
 
 
 calculate_time()
