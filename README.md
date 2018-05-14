@@ -1,1 +1,3 @@
-# time_keeper
+#time_keeper is inspired by a student teacher. The teacher has to work at various schools, and she needs to log her hours worked. This causes problems for her because the hours need to be converted into floats. Furthermore, she does not like math too much, unfortunately. So, I am creating a program for her that could alleviate her worries. 
+
+#time_keeper is designed to allow the user to input start and finish times, in universal time (aka military time), then it converts it to a float value. The total amount of time is returned to the user.
