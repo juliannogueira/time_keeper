@@ -105,7 +105,10 @@ def calculate_time():
 
 
 
-    
+    #The next block will subtract the beginning_time from the ending_time, and we will output a total for each entry.
+
+        per_entry_time = ending_time - beginning_time
+        print('\nThe amount of hours worked for entry ' + str(counter +1) + ' is: ' + str(per_entry_time) + '.')
 
         
 
