@@ -52,6 +52,13 @@ def calculate_time():
         beginning_minutes = int(beginning_minutes)
 
 
+    #This block of code is used to create a float value for the 'hour' and 'minutes' that were previously entered.
+    #It takes the beginning hour, which was converted to minutes, and it adds it to the beginning minutes. 
+    #This value will be used later to be subtracted from the 'total_ending_time'
+
+    total_beginning_time = beginning_hour + beginning_minutes
+    total_beginning_time /= 60  #This converts the time back into hours, but now it considers the minutes as well, 
+                                #thus giving us a decimal, or float, value.
 
 
 
