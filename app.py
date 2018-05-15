@@ -1,5 +1,7 @@
 def calculate_time():
 
+
+
     #This block of code below will be used to know how many times to run subsequent code.
 
     print('Enter the total amount of entries:')
@@ -14,8 +16,8 @@ def calculate_time():
             entry_amount = input()
         entry_amount = int(entry_amount)    #This is to perform operations later on.
 
-
     total_time = 0  #This will be used to store entry time values.
+
 
 
     #The next block of code allows the user to enter time entries. The beginning hour is entered first.
@@ -81,7 +83,7 @@ def calculate_time():
                 ending_hour = input()
             ending_hour = int(ending_hour)
             ending_hour *= 60
-        
+
 
 
     #The next block of code is for the minute entries.
@@ -112,7 +114,6 @@ def calculate_time():
         per_entry_time = ending_time - beginning_time
         print('\nThe amount of hours worked for entry ' + str(counter +1) + ' is: ' + str(per_entry_time) + '.')
 
-    
 
 
     #This block of code will be used to calculate the total amount of time worked for all entries. 
@@ -120,6 +121,25 @@ def calculate_time():
         total_time += per_entry_time
 
     print('\nThe total amount of hours you have worked is: ' + str(total_time) + '.')
-        
+
+
+
+    #This block of text instructs the user on how to use the program.
+
+print('''This program is designed to convert your logged work time into hours. It returns a decimal number. 
+For example, by entering a beginning time of 9:00am and an ending time of 12:30pm, the program will return 3.5 hours. 
+You will be required to enter universal time (military time). For example, 9:00am is written as 0900; 
+12:00pm is written as 1200; 1:00pm is written as 1300, and 5:30pm is written as 1730. 
+
+***It is important to note that you will enter the hour first, then the minutes after. The instructions will 
+be clear, but be sure to enter the value specified. For example, an instruction might say: 'Enter hours'; 
+the appropriate entry for 9:00am would be '9'. The next instruction would say: 'Enter minutes'; the appropriate 
+entry would be 0. If the specified time was 1:15pm, the appropriate entry would be '13' for 'Enter hours' and 
+'15' for 'Enter minutes'.*** 
+    
+You will be required to enter the total amount entries as well (days worked), because this allows the program to 
+determine how many times to execute the calculations. It is very straight-forward. Good luck. Thank you for teaching!\n''')
+
+
 
 calculate_time()
